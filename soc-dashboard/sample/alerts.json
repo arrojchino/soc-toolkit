@@ -1,0 +1,295 @@
+[
+  {
+    "timestamp": "2026-11-10T08:00:00+00:00",
+    "rule": {
+      "level": 15,
+      "description": "SSH authentication failure"
+    },
+    "agent": {
+      "name": "sshd"
+    },
+    "srcip": "203.0.113.10",
+    "location": "sshd:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T09:00:00+00:00",
+    "rule": {
+      "level": 12,
+      "description": "Multiple web attacks detected"
+    },
+    "agent": {
+      "name": "web-01"
+    },
+    "srcip": "203.0.113.11",
+    "location": "web-01:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T10:00:00+00:00",
+    "rule": {
+      "level": 10,
+      "description": "Suspicious process spawned"
+    },
+    "agent": {
+      "name": "win-wks-14"
+    },
+    "srcip": "203.0.113.12",
+    "location": "win-wks-14:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T11:00:00+00:00",
+    "rule": {
+      "level": 7,
+      "description": "File integrity monitoring alert"
+    },
+    "agent": {
+      "name": "web-01"
+    },
+    "srcip": "203.0.113.13",
+    "location": "web-01:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T12:00:00+00:00",
+    "rule": {
+      "level": 5,
+      "description": "Windows event log cleared"
+    },
+    "agent": {
+      "name": "win-wks-07"
+    },
+    "srcip": "203.0.113.14",
+    "location": "win-wks-07:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T13:00:00+00:00",
+    "rule": {
+      "level": 3,
+      "description": "New firewall rule added"
+    },
+    "agent": {
+      "name": "fw-edge"
+    },
+    "srcip": "203.0.113.15",
+    "location": "fw-edge:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T14:00:00+00:00",
+    "rule": {
+      "level": 13,
+      "description": "Rootkit behavior detected"
+    },
+    "agent": {
+      "name": "db-prod-02"
+    },
+    "srcip": "203.0.113.16",
+    "location": "db-prod-02:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T15:00:00+00:00",
+    "rule": {
+      "level": 9,
+      "description": "VirusTotal malicious hash match"
+    },
+    "agent": {
+      "name": "win-wks-14"
+    },
+    "srcip": "203.0.113.17",
+    "location": "win-wks-14:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T16:00:00+00:00",
+    "rule": {
+      "level": 15,
+      "description": "SSH authentication failure"
+    },
+    "agent": {
+      "name": "sshd"
+    },
+    "srcip": "203.0.113.18",
+    "location": "sshd:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T17:00:00+00:00",
+    "rule": {
+      "level": 12,
+      "description": "Multiple web attacks detected"
+    },
+    "agent": {
+      "name": "web-01"
+    },
+    "srcip": "203.0.113.19",
+    "location": "web-01:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T08:00:00+00:00",
+    "rule": {
+      "level": 10,
+      "description": "Suspicious process spawned"
+    },
+    "agent": {
+      "name": "win-wks-14"
+    },
+    "srcip": "203.0.113.20",
+    "location": "win-wks-14:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T09:00:00+00:00",
+    "rule": {
+      "level": 7,
+      "description": "File integrity monitoring alert"
+    },
+    "agent": {
+      "name": "web-01"
+    },
+    "srcip": "203.0.113.21",
+    "location": "web-01:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T10:00:00+00:00",
+    "rule": {
+      "level": 5,
+      "description": "Windows event log cleared"
+    },
+    "agent": {
+      "name": "win-wks-07"
+    },
+    "srcip": "203.0.113.22",
+    "location": "win-wks-07:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T11:00:00+00:00",
+    "rule": {
+      "level": 3,
+      "description": "New firewall rule added"
+    },
+    "agent": {
+      "name": "fw-edge"
+    },
+    "srcip": "203.0.113.23",
+    "location": "fw-edge:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T12:00:00+00:00",
+    "rule": {
+      "level": 13,
+      "description": "Rootkit behavior detected"
+    },
+    "agent": {
+      "name": "db-prod-02"
+    },
+    "srcip": "203.0.113.24",
+    "location": "db-prod-02:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T13:00:00+00:00",
+    "rule": {
+      "level": 9,
+      "description": "VirusTotal malicious hash match"
+    },
+    "agent": {
+      "name": "win-wks-14"
+    },
+    "srcip": "203.0.113.25",
+    "location": "win-wks-14:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T14:00:00+00:00",
+    "rule": {
+      "level": 15,
+      "description": "SSH authentication failure"
+    },
+    "agent": {
+      "name": "sshd"
+    },
+    "srcip": "203.0.113.26",
+    "location": "sshd:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T15:00:00+00:00",
+    "rule": {
+      "level": 12,
+      "description": "Multiple web attacks detected"
+    },
+    "agent": {
+      "name": "web-01"
+    },
+    "srcip": "203.0.113.27",
+    "location": "web-01:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T16:00:00+00:00",
+    "rule": {
+      "level": 10,
+      "description": "Suspicious process spawned"
+    },
+    "agent": {
+      "name": "win-wks-14"
+    },
+    "srcip": "203.0.113.28",
+    "location": "win-wks-14:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T17:00:00+00:00",
+    "rule": {
+      "level": 7,
+      "description": "File integrity monitoring alert"
+    },
+    "agent": {
+      "name": "web-01"
+    },
+    "srcip": "203.0.113.29",
+    "location": "web-01:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T08:00:00+00:00",
+    "rule": {
+      "level": 5,
+      "description": "Windows event log cleared"
+    },
+    "agent": {
+      "name": "win-wks-07"
+    },
+    "srcip": "203.0.113.30",
+    "location": "win-wks-07:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T09:00:00+00:00",
+    "rule": {
+      "level": 3,
+      "description": "New firewall rule added"
+    },
+    "agent": {
+      "name": "fw-edge"
+    },
+    "srcip": "203.0.113.31",
+    "location": "fw-edge:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T10:00:00+00:00",
+    "rule": {
+      "level": 13,
+      "description": "Rootkit behavior detected"
+    },
+    "agent": {
+      "name": "db-prod-02"
+    },
+    "srcip": "203.0.113.32",
+    "location": "db-prod-02:/var/log/auth.log"
+  },
+  {
+    "timestamp": "2026-11-10T11:00:00+00:00",
+    "rule": {
+      "level": 9,
+      "description": "VirusTotal malicious hash match"
+    },
+    "agent": {
+      "name": "win-wks-14"
+    },
+    "srcip": "203.0.113.33",
+    "location": "win-wks-14:/var/log/auth.log"
+  },
+  {
+    "rule": {},
+    "agent": {}
+  },
+  "this is not an alert object"
+]
