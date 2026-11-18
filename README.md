@@ -1,12 +1,12 @@
-# SOC / Veracode projects
+# SOC projects
 
 Built from the knowledge base of the delriscotechnologies and ancient-cthulhu GitHub accounts.
 All tools are local, stdlib-only Python 3.14, read-only, and emit no emojis.
 
 ## 1. soc-dashboard
-Merge Wazuh alerts (JSON/JSONL) with Veracode findings CSV into one self-contained HTML report.
+Merge Wazuh alerts (JSON/JSONL) with scanner findings CSV into one self-contained HTML report.
 - Run: `python dashboard.py --demo`
-- Run: `python dashboard.py --alerts sample/alerts.json --findings sample/veracode_findings.csv --out sample/report.html`
+- Run: `python dashboard.py --alerts sample/alerts.json --findings sample/findings.csv --out sample/report.html`
 - Artifact: `sample/report.html` (15,980 bytes, 12/12 sections verified)
 
 ## 2. repo-search

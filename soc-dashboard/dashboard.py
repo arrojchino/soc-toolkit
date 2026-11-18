@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Local SOC / Veracode dashboard.
+"""Local SOC dashboard.
 
-Merges Wazuh alert exports (JSON array or JSONL) with Veracode findings CSV
+Merges Wazuh alert exports (JSON array or JSONL) with scanner findings CSV
 exports into a single self-contained HTML report. Python standard library only.
 
 Usage:
@@ -42,7 +42,7 @@ CANON_FIELDS = [
     "Days to Resolve",
     "Scan Type",
     "Description",
-    "Veracode Link",
+    "Scanner Link",
     "Finding UID",
     "Issue ID",
     "Sandbox Name",
@@ -86,7 +86,7 @@ FIELD_ALIASES = {
     "scantype": "Scan Type",
     "analysistype": "Scan Type",
     "description": "Description",
-    "veracodelink": "Veracode Link",
+    "scannerlink": "Scanner Link",
     "findinguid": "Finding UID",
     "issueid": "Issue ID",
     "sandboxname": "Sandbox Name",
@@ -230,7 +230,7 @@ def normalize_finding(row):
 
 
 def load_findings(path):
-    """Load a Veracode findings CSV. Returns (findings, skipped_count)."""
+    """Load a scanner findings CSV. Returns (findings, skipped_count)."""
     findings = []
     skipped = 0
     with open(path, "r", encoding="utf-8-sig", errors="replace", newline="") as handle:
@@ -546,7 +546,7 @@ def render_html(stats, title):
     parts.append("<style>%s</style>" % CSS)
     parts.append("</head><body><div class=\"wrap\">")
     parts.append(
-        '<header><h1>%s</h1><div class="sub">SOC / Veracode merged dashboard '
+        '<header><h1>%s</h1><div class="sub">SOC merged dashboard '
         '&middot; generated %s</div></header>' % (esc(title), esc(stats["generated"]))
     )
 
@@ -560,7 +560,7 @@ def render_html(stats, title):
 
     parts.append('<div class="grid2">')
     parts.append('<section class="panel"><h2>Severity Distribution - Wazuh Alerts</h2>%s</section>' % bar_section(alert_pairs))
-    parts.append('<section class="panel"><h2>Severity Distribution - Veracode Findings</h2>%s</section>' % bar_section(finding_pairs))
+    parts.append('<section class="panel"><h2>Severity Distribution - Scanner Findings</h2>%s</section>' % bar_section(finding_pairs))
     parts.append("</div>")
 
     parts.append('<div class="grid2">')
@@ -576,7 +576,7 @@ def render_html(stats, title):
     parts.append('<section class="note"><h2 style="border:none;padding:0;margin-bottom:8px">Data Provenance and Disclaimer</h2>')
     parts.append(
         "<p><strong>Sources.</strong> Wazuh alerts: %s (%d valid, %d skipped/malformed). "
-        "Veracode findings: %s (%d valid, %d skipped/malformed).</p>"
+        "scanner findings: %s (%d valid, %d skipped/malformed).</p>"
         % (
             esc(stats["alerts_path"]), stats["total_alerts"], stats["alerts_skipped"],
             esc(stats["findings_path"]), stats["total_findings"], stats["findings_skipped"],
@@ -589,7 +589,7 @@ def render_html(stats, title):
     )
     parts.append(
         "<p><strong>Interpretation.</strong> This report is an unofficial aggregation for SOC "
-        "triage and is not an official Veracode product. Severities, levels, and counts reflect "
+        "triage and is not an official Scanner product. Severities, levels, and counts reflect "
         "the supplied exports at the time of generation and are evidence for review, not a verdict. "
         'A Wazuh level of %d or higher is counted as a high-severity alert. "Critical findings" '
         "means Very High or Critical severity. Verify all items against the source systems before "
@@ -597,7 +597,7 @@ def render_html(stats, title):
     )
     parts.append("</section>")
 
-    parts.append('<footer>Local SOC / Veracode dashboard &middot; %s</footer>' % esc(stats["generated"]))
+    parts.append('<footer>Local SOC dashboard &middot; %s</footer>' % esc(stats["generated"]))
     parts.append("</div><script>%s</script></body></html>" % JS)
     return "\n".join(parts)
 
@@ -676,7 +676,7 @@ def generate_demo():
             "STATIC",
             "Sample finding %d for demonstration purposes." % i,
         ])
-    path = SAMPLE_DIR / "veracode_findings.csv"
+    path = SAMPLE_DIR / "findings.csv"
     with open(path, "w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)
         writer.writerow(header)
@@ -701,12 +701,12 @@ def build(alerts_path, findings_path, out_path, title):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(
-        description="Build a self-contained SOC / Veracode HTML dashboard."
+        description="Build a self-contained SOC HTML dashboard."
     )
     parser.add_argument("--alerts", help="Wazuh alerts JSON array or JSONL file")
-    parser.add_argument("--findings", help="Veracode findings CSV file")
+    parser.add_argument("--findings", help="scanner findings CSV file")
     parser.add_argument("--out", help="Output HTML file path")
-    parser.add_argument("--title", default="SOC / Veracode Dashboard", help="Report title")
+    parser.add_argument("--title", default="SOC Dashboard", help="Report title")
     parser.add_argument(
         "--demo", action="store_true",
         help="Generate synthetic sample data under sample/ and build a demo report",

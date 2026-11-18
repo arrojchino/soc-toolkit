@@ -1,6 +1,6 @@
 {
   "tool": "normalize-findings",
-  "source": "C:\\Users\\Garza\\soc-veracode-projects\\toolkit\\sample\\findings.csv",
+  "source": "C:\\Users\\Garza\\soc-projects\\toolkit\\sample\\findings.csv",
   "canonical_columns": [
     "Application Name",
     "Application ID",

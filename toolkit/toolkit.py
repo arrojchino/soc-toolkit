@@ -8,7 +8,7 @@ Subcommands:
                           (or --input JSON). Never opens sockets.
   firewall-rules          Read Windows firewall rules via Get-NetFirewallRule
                           (or --input CSV). Never modifies anything.
-  normalize-findings CSV  Normalize a Veracode findings CSV to a canonical
+  normalize-findings CSV  Normalize a scanner findings CSV to a canonical
                           schema, accepting common header variants.
   verify-trace FILE       Heuristically check evidence-field presence and
                           record-hash consistency of a JSON tool trace.
@@ -38,7 +38,7 @@ from email.utils import parseaddr
 VERSION = "1.0.0"
 
 # ---------------------------------------------------------------------------
-# Canonical Veracode findings schema (from the knowledge base) and the
+# Canonical scanner findings schema (from the knowledge base) and the
 # common header/variant spellings accepted on input.
 # ---------------------------------------------------------------------------
 CANONICAL_COLUMNS = [
@@ -637,7 +637,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_firewall_rules)
 
     p = sub.add_parser("normalize-findings",
-                       help="normalize a Veracode findings CSV")
+                       help="normalize a scanner findings CSV")
     p.add_argument("csv", help="path to a findings CSV")
     p.add_argument("--out", help="write normalized output to this path")
     p.add_argument("--format", choices=["csv", "json"], default="csv",

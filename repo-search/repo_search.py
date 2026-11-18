@@ -53,7 +53,7 @@ def account_for_summary(stem: str) -> str:
     s = stem.lower()
     if s.startswith("delrisco"):
         return "delriscotechnologies"
-    if s.startswith("veracode"):
+    if any(k in s for k in ("data-extraction", "workflow-app", "admin-sca")):
         return "ancient-cthulhu"
     return "mixed"
 
@@ -248,7 +248,7 @@ def cmd_index(_args: argparse.Namespace) -> None:
 def build_fts_query(query: str) -> str:
     """Turn user text into an OR query; punctuation inside a word becomes a phrase.
 
-    'veracode.yml' -> '"veracode yml"' (the unicode61 tokenizer splits the dot)
+    'scanner.yml' -> '"scanner yml"' (the unicode61 tokenizer splits the dot)
     'phishfry eml' -> 'phishfry OR eml'
     """
     phrases = []

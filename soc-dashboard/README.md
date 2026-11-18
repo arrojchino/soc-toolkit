@@ -1,7 +1,7 @@
-# SOC / Veracode Dashboard
+# SOC Dashboard
 
 A local, single-file HTML dashboard that merges Wazuh alert exports with
-Veracode findings CSV exports. Python standard library only - no pip installs,
+scanner findings CSV exports. Python standard library only - no pip installs,
 no CDN, no external assets. The report is fully self-contained (inline CSS/JS)
 and uses a professional dark aesthetic.
 
@@ -30,13 +30,13 @@ Generate synthetic sample data under `sample/` and build a demo report:
 python dashboard.py --demo
 ```
 
-The demo writes `sample/alerts.json`, `sample/veracode_findings.csv`, and
+The demo writes `sample/alerts.json`, `sample/findings.csv`, and
 `sample/report.html`.
 
 Rebuild the report from the generated samples (explicit paths):
 
 ```bash
-python dashboard.py --alerts sample/alerts.json --findings sample/veracode_findings.csv --out sample/report.html
+python dashboard.py --alerts sample/alerts.json --findings sample/findings.csv --out sample/report.html
 ```
 
 Run `python dashboard.py --help` for the full argument list.
@@ -57,9 +57,9 @@ JSON Lines (one JSON object per line). Recognized fields (all optional):
 A row with neither a rule description nor a level is skipped and counted as
 malformed.
 
-### Veracode findings (`--findings`)
+### scanner findings (`--findings`)
 
-A CSV export with a header row. The canonical Veracode vocabulary is accepted:
+A CSV export with a header row. The canonical Scanner vocabulary is accepted:
 
 `Application Name`, `Application ID`, `Custom Severity Name`, `CVE ID`,
 `CWE ID`, `Flaw Name`, `First Found Date`, `Filename/Class`,
@@ -79,7 +79,7 @@ provenance note.
 ## Report sections
 
 - Summary cards: total alerts, high-severity alerts, total findings, critical findings
-- Severity Distribution bars for Wazuh alerts (by rule level) and Veracode findings (by severity)
+- Severity Distribution bars for Wazuh alerts (by rule level) and scanner findings (by severity)
 - Top Triggered Rules
 - Top Affected Applications
 - Top CWEs
@@ -94,6 +94,6 @@ are constants at the top of `dashboard.py`.
 ## Disclaimer
 
 This is an unofficial aggregation tool for SOC triage, not an official
-Veracode product. Counts and severities reflect the supplied exports at
+Scanner product. Counts and severities reflect the supplied exports at
 generation time and are evidence for review, not a verdict. Verify findings
 against the source systems before acting.

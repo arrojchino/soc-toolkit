@@ -3,7 +3,7 @@
 A read-only, local-only SOC utility CLI built with the Python standard library
 only (tested on Python 3.14.9, Windows 11). It consolidates five focused
 workflows: EML evidence triage, established-connection viewing, firewall-rule
-viewing, Veracode findings normalization, and tool-trace consistency checking.
+viewing, scanner findings normalization, and tool-trace consistency checking.
 
 All heuristics are **indicators, not verdicts**. No command in this toolkit
 makes an authenticity, maliciousness, or causation claim.
@@ -94,7 +94,7 @@ python toolkit.py firewall-rules --input sample/firewall.csv
 
 ### 4. normalize-findings CSV
 
-Normalize a Veracode findings CSV into the canonical schema, accepting common
+Normalize a scanner findings CSV into the canonical schema, accepting common
 header variants (for example `app_name`, `application_id`, `custom_severity`,
 `cve`, `cwe_id`, `flaw_name`, `first_found_date`, `filename`, `status`,
 `resolution_date`, `team`, `scan_type`). `Days to Resolve` is auto-calculated

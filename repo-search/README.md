@@ -21,7 +21,7 @@ scoring. Search is case-insensitive and supports multi-word queries.
 ## Build the index
 
 ```bash
-cd C:/Users/Garza/soc-veracode-projects/repo-search
+cd C:/Users/Garza/soc-projects/repo-search
 python repo_search.py index
 ```
 
@@ -34,12 +34,12 @@ matched terms wrapped in `[brackets]`.
 
 ```bash
 python repo_search.py search phishfry
-python repo_search.py search veracode.yml
+python repo_search.py search ruletrace
 python repo_search.py search "active directory" --limit 5
 ```
 
-A word containing punctuation is tokenized as a phrase: `veracode.yml` matches
-text containing `veracode.yml` (the FTS tokenizer splits on the dot). Multiple
+A word containing punctuation is tokenized as a phrase: `ruletrace` matches
+text containing `ruletrace` (the FTS tokenizer splits on the dot). Multiple
 words are OR-ed and ranked by relevance, so documents matching more terms rank
 higher.
 
@@ -51,7 +51,7 @@ summary files.
 ```bash
 python repo_search.py show redline
 python repo_search.py show delriscotechnologies/phishfry
-python repo_search.py show Veracode-Admin-Manager
+python repo_search.py show phishfry
 ```
 
 ## List the inventory
