@@ -1,3 +1,0 @@
-# No third-party dependencies. This project uses ONLY the Python standard
-# library (argparse, csv, html, json, os, sys, collections, datetime, pathlib).
-# No pip install is required or supported.
