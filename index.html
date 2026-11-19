@@ -1,99 +1,60 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>04 / 69 — micro-skill constellation</title>
+<title>Local Security Toolkit</title>
 <style>
 :root{color-scheme:dark;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:#080b09;color:#e8efe9}
-*{box-sizing:border-box}body{margin:0;padding:40px 28px 70px;background:radial-gradient(800px 420px at 85% -10%,#12271a,#080b09 65%)}
-header,main,footer{max-width:1080px;margin:0 auto}
-h1{font-size:clamp(34px,7vw,64px);letter-spacing:.14em;margin:0;color:#d8f0dc;font-weight:500}
-.sub{color:#789184;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:12px}
-.rule{border-top:1px solid #1d2c22;margin:26px 0}
-.stats{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0}
-.stats div{font-size:11px;letter-spacing:.16em;color:#7c9486;text-transform:uppercase}
-.stats b{display:block;font-size:30px;color:#b7e3bf;margin-top:6px;font-weight:500}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px}
-.c{display:block;border:1px solid #1d2c22;border-radius:3px;padding:13px 14px;text-decoration:none;background:#0b100d;transition:border-color .2s}
-.c:hover{border-color:#5f9e70}.c.live{border-color:#2c5b3d}
-.n{display:block;font-size:13px;color:#d7f0db;letter-spacing:.08em}
-.t{display:block;font-size:10px;color:#82998b;margin-top:7px;line-height:1.5}
-.s{display:block;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#5f9e70;margin-top:10px}
-.c.queued .s{color:#4c5c52}
-footer{margin-top:36px;border-top:1px solid #1d2c22;padding-top:18px;font-size:10px;letter-spacing:.14em;color:#5e7466;line-height:1.9}
+*{box-sizing:border-box}body{margin:0;padding:44px 28px 80px;background:radial-gradient(900px 480px at 85% -10%,#12271a,#080b09 62%)}
+header,main,footer{max-width:960px;margin:0 auto}
+h1{font-size:clamp(32px,6vw,58px);letter-spacing:.12em;margin:0;color:#d8f0dc;font-weight:500}
+.sub{color:#789184;font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-top:14px;line-height:1.9}
+.rule{border-top:1px solid #1d2c22;margin:30px 0}
+.row{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid #16231b}
+.num{font-size:11px;color:#5f9e70;letter-spacing:.12em;padding-top:4px}
+h2{font-size:18px;letter-spacing:.08em;margin:0 0 7px;font-weight:500;color:#e7f5e8}
+p{font-size:12px;line-height:1.85;color:#9fbbaa;margin:0 0 10px;max-width:700px}
+a{color:#b7e3bf;text-decoration:none;border-bottom:1px solid #2c5b3d;padding-bottom:1px}
+a:hover{color:#fff;border-color:#7fbf92}
+.tags{font-size:10px;letter-spacing:.14em;color:#61776a;text-transform:uppercase}
+footer{margin-top:36px;font-size:10px;letter-spacing:.14em;color:#5e7466;line-height:2}
+@media(max-width:600px){body{padding:28px 18px 60px}.row{grid-template-columns:1fr;gap:6px}}
 </style></head><body>
-<header><h1>04 / 69</h1><div class="sub">Micro-skills for patient defense — one job per repo</div></header>
-<div class="stats"><div>Live<b>4</b></div><div>Queued<b>65</b></div><div>Target<b>69</b></div></div>
+<header><h1>LOCAL SECURITY TOOLKIT</h1><div class="sub">Local-first tools for appsec, SOC and evidence work.<br>No noise. No telemetry. Work that survives review.</div></header>
 <div class="rule"></div>
-<main><div class="grid"><a class="c live" href="https://github.com/arrojchino/amber"><span class="n">amber</span><span class="t">threat modeling for a small service</span><span class="s">live</span></a>
-<a class="c live" href="https://github.com/arrojchino/basalt"><span class="n">basalt</span><span class="t">asset inventory from read-only sources</span><span class="s">live</span></a>
-<a class="c live" href="https://github.com/arrojchino/beacon"><span class="n">beacon</span><span class="t">alert triage with severity thresholds</span><span class="s">live</span></a>
-<a class="c live" href="https://github.com/arrojchino/birch"><span class="n">birch</span><span class="t">secrets review in pull requests</span><span class="s">live</span></a>
-<a class="c queued" href="https://github.com/arrojchino/bloom"><span class="n">bloom</span><span class="t">dependency risk review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/breeze"><span class="n">breeze</span><span class="t">container image review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/cedar"><span class="n">cedar</span><span class="t">IaC drift review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/chalk"><span class="n">chalk</span><span class="t">log normalization</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/cinder"><span class="n">cinder</span><span class="t">finding deduplication</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/clay"><span class="n">clay</span><span class="t">evidence hashing</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/cloud"><span class="n">cloud</span><span class="t">attack surface mapping</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/cobalt"><span class="n">cobalt</span><span class="t">authentication review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/coral"><span class="n">coral</span><span class="t">authorization review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/cypress"><span class="n">cypress</span><span class="t">input validation review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/dawn"><span class="n">dawn</span><span class="t">secure defaults checklist</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/delta"><span class="n">delta</span><span class="t">change impact review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/drift"><span class="n">drift</span><span class="t">configuration drift detection</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/ember"><span class="n">ember</span><span class="t">incident timeline building</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/fern"><span class="n">fern</span><span class="t">phishing email triage</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/flint"><span class="n">flint</span><span class="t">firewall rule review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/forge"><span class="n">forge</span><span class="t">CI smoke checks</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/frost"><span class="n">frost</span><span class="t">patch prioritization</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/granite"><span class="n">granite</span><span class="t">baseline hardening</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/harbor"><span class="n">harbor</span><span class="t">backup verification</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/haze"><span class="n">haze</span><span class="t">false-positive reduction</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/helix"><span class="n">helix</span><span class="t">API schema review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/indigo"><span class="n">indigo</span><span class="t">token scope review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/iris"><span class="n">iris</span><span class="t">access review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/jade"><span class="n">jade</span><span class="t">secure coding checklist</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/juniper"><span class="n">juniper</span><span class="t">subdomain inventory</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/lantern"><span class="n">lantern</span><span class="t">detection rule writing</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/lava"><span class="n">lava</span><span class="t">exploitability triage</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/linen"><span class="n">linen</span><span class="t">report writing</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/marble"><span class="n">marble</span><span class="t">data classification</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/meadow"><span class="n">meadow</span><span class="t">third-party risk review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/mist"><span class="n">mist</span><span class="t">network flow review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/moss"><span class="n">moss</span><span class="t">retention policy review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/obsidian"><span class="n">obsidian</span><span class="t">offline forensics chain of custody</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/ochre"><span class="n">ochre</span><span class="t">password policy review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/onyx"><span class="n">onyx</span><span class="t">privilege escalation review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/opal"><span class="n">opal</span><span class="t">encryption review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/orchid"><span class="n">orchid</span><span class="t">privacy impact review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/pebble"><span class="n">pebble</span><span class="t">minimal proof-of-concept documentation</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/pine"><span class="n">pine</span><span class="t">DNS hygiene review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/quartz"><span class="n">quartz</span><span class="t">build provenance review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/raven"><span class="n">raven</span><span class="t">threat intel enrichment</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/reed"><span class="n">reed</span><span class="t">vulnerability aging</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/ridge"><span class="n">ridge</span><span class="t">trust boundary review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/river"><span class="n">river</span><span class="t">data flow mapping</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/rust"><span class="n">rust</span><span class="t">legacy system review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/sage"><span class="n">sage</span><span class="t">secure configuration templates</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/sand"><span class="n">sand</span><span class="t">sandbox analysis</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/slate"><span class="n">slate</span><span class="t">read-only diagnostics</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/snow"><span class="n">snow</span><span class="t">input sanitization review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/solar"><span class="n">solar</span><span class="t">uptime checks</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/stone"><span class="n">stone</span><span class="t">integrity checks</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/storm"><span class="n">storm</span><span class="t">rate-limit review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/summit"><span class="n">summit</span><span class="t">executive summary writing</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/tundra"><span class="n">tundra</span><span class="t">cold-storage review</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/twilight"><span class="n">twilight</span><span class="t">decommission checklist</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/umber"><span class="n">umber</span><span class="t">mock data generation</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/valley"><span class="n">valley</span><span class="t">gap analysis</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/velvet"><span class="n">velvet</span><span class="t">user-facing security copy</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/vertex"><span class="n">vertex</span><span class="t">trust boundary mapping</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/willow"><span class="n">willow</span><span class="t">recovery drills</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/winter"><span class="n">winter</span><span class="t">freeze-period changes</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/wisp"><span class="n">wisp</span><span class="t">quick recon notes</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/zephyr"><span class="n">zephyr</span><span class="t">performance-safe scanning</span><span class="s">queued</span></a>
-<a class="c queued" href="https://github.com/arrojchino/zircon"><span class="n">zircon</span><span class="t">audit evidence packaging</span><span class="s">queued</span></a></div></main>
-<footer>
-Skill design: concise by default. Description is routing logic, not marketing. Negative examples stop misfires.<br>
-Templates live inside the skill, not the system prompt. Progressive disclosure keeps context cheap.<br>
-Worker adds one repo every 15 minutes until the constellation is complete.
-</footer></body></html>
+<main>
+<div class="row"><div class="num">01</div><div><h2>Signal</h2>
+<p>A local-first finding ledger. Ingest a scanner export, verify findings with hashed evidence, and render a self-contained HTML report or SARIF. Stable fingerprints and explicit verification states.</p>
+<p><a href="https://github.com/arrojchino/signal">Source</a> &nbsp;·&nbsp; <a href="https://arrojchino.github.io/signal/">Live</a></p>
+<div class="tags">appsec · findings · evidence · sarif</div></div></div>
+
+<div class="row"><div class="num">02</div><div><h2>Sentinel</h2>
+<p>One read-only CLI for 69 focused security checks grouped by team (blue, red, yellow, appsec, devops). JSON envelope, exit-code gate, Wazuh bridge, IOC scan and timeline.</p>
+<p><a href="https://github.com/arrojchino/sentinel">Source</a></p>
+<div class="tags">soc · checks · ci gate · wazuh</div></div></div>
+
+<div class="row"><div class="num">03</div><div><h2>Atlas</h2>
+<p>Dependency-free search CLI over the 55-repo security knowledge base. SQLite FTS5 ranking with a Python fallback, multi-word queries and bracketed snippets.</p>
+<p><a href="https://github.com/arrojchino/atlas">Source</a></p>
+<div class="tags">search · knowledge base · sqlite</div></div></div>
+
+<div class="row"><div class="num">04</div><div><h2>Ward</h2>
+<p>Read-only local SOC utilities: EML evidence triage, established connections, firewall rules, scanner findings normalization and tool-trace consistency.</p>
+<p><a href="https://github.com/arrojchino/ward">Source</a></p>
+<div class="tags">soc · eml · firewall · evidence</div></div></div>
+
+<div class="row"><div class="num">05</div><div><h2>Trace</h2>
+<p>Turns a REA JSON analysis into a forensic report pipeline: evidence ledger, hashed custody and a self-contained HTML report.</p>
+<p><a href="https://github.com/arrojchino/trace">Source</a></p>
+<div class="tags">forensics · evidence · report</div></div></div>
+
+<div class="row"><div class="num">06</div><div><h2>Burn</h2>
+<p>A minimal, patient appsec dashboard: session timer, severity counts, triage flow and a findings table. Illustrative data, honest labels.</p>
+<p><a href="https://github.com/arrojchino/burn">Source</a> &nbsp;·&nbsp; <a href="https://arrojchino.github.io/burn/">Live</a></p>
+<div class="tags">dashboard · triage · minimal</div></div></div>
+
+<div class="row"><div class="num">07</div><div><h2>Balling</h2>
+<p>An ASCII silhouette traced into contours, extruded as real geometry and rendered as a rotating metallic sculpture in Three.js.</p>
+<p><a href="https://github.com/arrojchino/balling">Source</a> &nbsp;·&nbsp; <a href="https://arrojchino.github.io/balling/">Live</a></p>
+<div class="tags">three.js · geometry · interaction</div></div></div>
+</main>
+<footer>Verification over volume. Evidence over claims. <a href="https://arrojchino.github.io/">Portfolio</a></footer>
+</body></html>
